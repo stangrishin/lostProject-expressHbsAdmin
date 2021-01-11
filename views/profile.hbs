@@ -1,0 +1,26 @@
+<div class="content">
+  <h3 class="desc">Здесь вы можете изменить информацию о своем аккаунте</h3>
+  <form class="regButtons inputs" style="flex-direction: column;" method="POST" action="/users/profile/{{id}}">
+    <div>
+      <input type="email" name="email" value="{{currentUser.email}}" placeholder="email">
+    </div>
+    <div>
+      <input type="tel" name="phone" value="{{currentUser.phone}}" placeholder="tell number">
+    </div>
+    <div>
+      <input type="password" name="password" placeholder="new password (min 8 symb)">
+    </div>
+    <div>
+      <input type="text" name="nameLombard" value="{{currentUser.nameLombard}}" placeholder="organisation name">
+    </div>
+    <div>
+      <input type="text" name="adressLombard" value="{{currentUser.adressLombard}}"
+        placeholder="adress (City, street, house)">
+    </div>
+    <div>
+      <input type="text" name="managerName" value="{{currentUser.managerName}}" placeholder="manager name">
+    </div>
+    <button type="submit" class="button">Save</button>
+  </form>
+
+</div>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="/stylesheets/style.css">
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="/js/application.js"></script>
+
+
+  <title>JWLAria</title>
+
+</head>
+
+<body>
+  <nav class="clearfix mar-b-1">
+    <ul class="no-bullets no-margin no-padding right navi">
+
+
+
+
+
+      {{#if email}}
+      {{#if admin}}
+      <li class="pipe-separate t-light-green left"><a href='/admin/main' class="navi_item">Home</a></li>
+      {{else}}
+      <li class="pipe-separate t-light-green left"><a href='/users/{{id}}/main' class="navi_item">Home</a></li>
+      {{/if}}
+      <li class="pipe-separate t-light-green left navi_item">User: {{email}}</li>
+      <li class="pipe-separate t-light-green left"><a href="/users/profile" class="navi_item">Profile</a></li>
+      <li class="pipe-separate t-light-green left"><a href="/users/signout" class="navi_item">Sign out</a></li>
+      {{/if}}
+    </ul>
+  </nav>
+
+  {{{body}}}
+</body>
+
+</html>

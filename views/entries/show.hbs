@@ -1,0 +1,32 @@
+<div class="content show_content">
+
+  <div class="show_info">
+    <h1> <label></label> {{item.nameItems}}</h1>
+    <p>{{item.describe}}</p>
+    <p> <label>Price: </label> {{item.price}}</p>
+  </div>
+
+  <div class="show_img">
+    <img class="imgSize" src='{{item.linkPhoto}}'>
+  </div>
+
+  <ul class="no-bullets no-padding mar-t-2 show_list">
+    <li class="pipe-separate left show_button">
+      <form method="get" action="/entries/{{ item._id }}/edit" style="border-color: black;" class="inline">
+        <input type="hidden" name="_method" value="Edit">
+        <input type="submit" value="Edit" class="buttonSize no-border no-outline no-bg c-white hover-underline cursor">
+      </form>
+    </li>
+
+
+
+    <li class="pipe-separate left show_button">
+      <form method="post" action="/entries/{{item._id}}" style="border-color: black;" class="inline">
+        <input type="hidden" name="_method" value="Delete">
+        <input type="submit" value="Delete"
+          class="buttonSize no-border no-outline no-bg c-white hover-underline cursor">
+      </form>
+    </li>
+  </ul>
+
+</div>

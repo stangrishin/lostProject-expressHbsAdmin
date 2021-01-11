@@ -1,0 +1,23 @@
+<div class="columns">
+  <div class="button_block">
+    {{#if authorised}}
+    <a href="/entries/new" class="block button w-100 mar-t-2 mar-b-3 pad-2 round-1 text-c center">Add a new Item</a>
+    {{/if}}
+  </div>
+  <main role="main list">
+    <ul class="entries-list no-bullets no-padding">
+      {{#each entries}}
+      <li class="entry-item pad-b-4 list_item">
+
+        <div class="item_info">
+          <a href="/entries/{{id}}" class="entry-title font-2 pad-b-1-4"> <label> </label> {{nameItems}}</a>
+          <div class="entry-title font-2 pad-b-1-4"> <label>Price: </label>{{price}} <span>rub.</span> </div>
+          <p class="entry-stub">{{describe}}</p>
+        </div>
+
+        <img class="imgSize" src='{{linkPhoto}}'>
+      </li>
+      {{/each}}
+    </ul>
+  </main>
+</div>
